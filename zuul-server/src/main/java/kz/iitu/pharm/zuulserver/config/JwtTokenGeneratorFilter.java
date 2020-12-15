@@ -3,7 +3,7 @@ package kz.iitu.pharm.zuulserver.config;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import kz.iitu.pharm.zuulserver.entity.User;
+import kz.iitu.pharm.zuulserver.User;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -75,5 +75,7 @@ public class JwtTokenGeneratorFilter extends UsernamePasswordAuthenticationFilte
 
         // Add token to header
         response.addHeader("Authorization", "Bearer " + token);
+        response.getHeader(token);
+        System.out.println(token);
     }
 }

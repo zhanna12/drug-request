@@ -1,6 +1,7 @@
 package kz.iitu.pharm.zuulserver.config;
 
-import kz.iitu.pharm.zuulserver.UserServiceImpl;
+
+import kz.iitu.pharm.zuulserver.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
